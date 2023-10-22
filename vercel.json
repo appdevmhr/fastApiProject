@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/api.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app/api.py"
+    }
+  ],
+  "projectSettings": {
+    "name": "mahmudul-hasans-projects-3002b30b",
+    "runtime": "python",
+    "runtimeVersion": "3.11",
+    "entryPoint": "app.api:app",
+    "buildCommand": "pip install -r requirements.txt",
+    "startCommand": "uvicorn app.api:app --host 0.0.0.0 --port 8000 --reload",
+    "domains": [
+      "resell-book.mh-bspi.xyz",
+      "mh-bspi.xyz",
+      "www.mh-bspi.xyz"
+    ]
+  }
+}
